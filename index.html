@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="quotes.js"> </script>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,41 +18,41 @@
 <body>
   <div class="bg-cool absolute min-h-screen w-screen ">
   <div class="m-3">
-    <div class="transition-all  text-white duration-500  hover:-skew-x-12 cursor-default transform bg-white bg-opacity-30 font-bold w-max p-4 rounded-lg mx-auto text-xl md:text-2xl shadow-lg ">Log into Vistora</div>
-    
-    <!-- REGISTRATION ELEMENT -->
-    <div class="bg-white rounded-lg p-2 my-4 bg-opacity-40 sm:w-1/2 sm:mx-auto">
-        <div class="text-lg text-center text-white "> Username </div>
-<input placeholder="Username..."  class="bg-opacity-20 bg-white border-0 rounded  placeholder-opacity-30 m-1 border-0 w-full mx-auto text-white text-xl p-1 focus:outline-none transition-all duration-500 focus:bg-opacity-20 focus:shadow-inner focus:bg-gray-500">
-		 <div class="text-lg text-center text-white "> Password </div>
-<input placeholder="Password..."  type="password" class="bg-opacity-20 bg-white border-0 rounded  placeholder-opacity-30 m-1 border-0 w-full mx-auto text-white text-xl p-1 focus:outline-none transition-all duration-500 focus:bg-opacity-20 focus:shadow-inner focus:bg-gray-500">
+	
+	<!-- NAVBAR COMPONENT -->
+	
+<nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+  <div class="flex items-center flex-shrink-0 text-white mr-6">
+    <span class="font-semibold text-xl tracking-tight block">Vistora </span>
+  </div>
+  <div class="block lg:hidden">
+    <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+      <svg class="fill-current h-3 w-3 bg-white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+    </button>
+  </div>
+  <div class="w-full block align-middle flex-grow lg:flex lg:items-center text-white lg:w-auto">
+    <div class="text-sm lg:flex-grow">
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-blue-400 mr-4">
+        Home
+      </a>
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-blue-400 mr-4">
+        Forum
+      </a>      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-blue-400 mr-4">
+        Store
+      </a>      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-blue-400 mr-4">
+        More
+      </a>
+
     </div>
-		<div class="sm:w-1/2  hover:bg-gray-100 hover:bg-opacity-70 sm:mx-auto shadow-inner text-center p-2 bg-white bg-opacity-30 transition-all duration-500 text-white cursor-pointer rounded hover:shadow-xl " onclick="javascript:alert(1)"> Login </div>
-	<div>
-	<img src="https://media2.giphy.com/media/j3mdQpQ9SKxFOWs9gy/200.gif" class="mx-auto mt-6 rounded-full" /> 
-	<p class="text-center text-white italic font-serif" id="quote"> "You're my sussy baka forever..."</p>
-	</div>
-</div>
-</div>
+    <div>
+	      <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 hover:text-blue-500 lg:mt-0">Register</a>
+
+      <a href="./login.html" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white hover:text-blue-500 mt-4 lg:mt-0">Login</a>
+    </div>
+  </div>
+</nav>
+	
+  </div>
+  </div>
+  
 </body>
-<script>
-
-const quoteSelector= document.querySelector('#quote');
-	fetch('https://zenquotes.io/api/random/Vistorax', { headers:{
-	'Access-Control-Allow-Origin': '*'
-	}
-	}).then((response)=>{
-	console.log(`[LOGGER:Quotes] - API REQUEST DONE`)
-		console.log(`[LOGGER:Quotes] - RESPONSE:
-		${response}
-		`)
-
-	// Since its limit 1 we access the first element in the array.
-	let quote = response[0]['q'];
-	let author = response[0]['a'];
-	querySelector.innerHTML=`"${quote}" - ${author}`
-})
-</script>
-</html>
-
-
