@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <script src="quotes.js"> </script>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
@@ -7,50 +8,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vistora Test</title>
   <style>
-  .bg-cool {
-  background-image: url("https://i.pinimg.com/originals/13/b0/00/13b0000818cfd9cf27d39afaa051dc23.gif");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}</style>
+    .bg-cool {
+      background-image: url("https://i.pinimg.com/originals/13/b0/00/13b0000818cfd9cf27d39afaa051dc23.gif");
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
 </head>
+
 <body>
   <div class="bg-cool absolute min-h-screen w-screen ">
-  <div class="m-3">
-    <div class="transition-all  text-white duration-500  hover:-skew-x-12 cursor-default transform  bg-transparent border-white border font-bold w-max p-4 rounded-lg mx-auto text-xl md:text-2xl shadow-lg ">Log into Vistora</div>
-    
-    <!-- REGISTRATION ELEMENT -->
-    <div class="border-white border rounded-lg p-2 my-4 bg-transparent sm:w-1/2 md:w-1/3 sm:mx-auto">
+    <div class="m-3">
+      <div
+        class="transition-all  text-white duration-500  hover:-skew-x-12 cursor-default transform  bg-transparent border-white border font-bold w-max p-4 rounded-lg mx-auto text-xl md:text-2xl shadow-lg ">
+        Log into Vistora</div>
+
+      <!-- REGISTRATION ELEMENT -->
+      <div class="border-white border rounded-lg p-2 my-4 bg-transparent sm:w-1/2 md:w-1/3 sm:mx-auto">
         <div class="text-lg text-center text-white "> Username </div>
-<input placeholder="Username..."  class="bg-opacity-20 bg-white border-0 rounded  placeholder-opacity-30 m-1 border-0 w-full mx-auto text-white text-xl p-1 focus:outline-none transition-all duration-500 focus:bg-opacity-20 focus:shadow-inner focus:bg-gray-500">
-		 <div class="text-lg text-center text-white "> Password </div>
-<input placeholder="Password..."  type="password" class="bg-opacity-20 bg-white border-0 rounded  placeholder-opacity-30 m-1 border-0 w-full mx-auto text-white text-xl p-1 focus:outline-none transition-all duration-500 focus:bg-opacity-20 focus:shadow-inner focus:bg-gray-500">
+        <input placeholder="Username..."
+          class="bg-opacity-20 bg-white border-0 rounded  placeholder-opacity-30 m-1 border-0 w-full mx-auto text-white text-xl p-1 focus:outline-none transition-all duration-500 focus:bg-opacity-20 focus:shadow-inner focus:bg-gray-500">
+        <div class="text-lg text-center text-white "> Password </div>
+        <input placeholder="Password..." type="password"
+          class="bg-opacity-20 bg-white border-0 rounded  placeholder-opacity-30 m-1 border-0 w-full mx-auto text-white text-xl p-1 focus:outline-none transition-all duration-500 focus:bg-opacity-20 focus:shadow-inner focus:bg-gray-500">
+      </div>
+      <div
+        class="sm:w-1/2 md:w-1/3   sm:mx-auto shadow-inner text-center p-2 border-white border hover:text-black hover:bg-white bg-transparent transition-all duration-500 text-white cursor-pointer rounded hover:shadow-xl hover:border-black "
+        onclick="javascript:alert(1)"> Login </div>
+      <div>
+        <img src="https://media2.giphy.com/media/j3mdQpQ9SKxFOWs9gy/200.gif" class="mx-auto mt-6 rounded-full" />
+        <p class="text-center text-white italic font-serif font-thin mt-2" id="quote"> "You're my sussy baka forever..."
+        </p>
+      </div>
     </div>
-		<div class="sm:w-1/2 md:w-1/3   sm:mx-auto shadow-inner text-center p-2 border-white border hover:text-black hover:bg-white bg-transparent transition-all duration-500 text-white cursor-pointer rounded hover:shadow-xl " onclick="javascript:alert(1)"> Login </div>
-	<div>
-	<img src="https://media2.giphy.com/media/j3mdQpQ9SKxFOWs9gy/200.gif" class="mx-auto mt-6 rounded-full" /> 
-	<p class="text-center text-white italic font-serif font-thin mt-2" id="quote"> "You're my sussy baka forever..."</p>
-	</div>
-</div>
-</div>
+  </div>
 </body>
 <script>
 
 
-const quoteSelector= document.querySelector('#quote');
-let end = Date.now();
-let totalTime = end-beginning
-console.log(`[LOGGER:QUOTES] Quotes loaded in ${totalTime}ms`);
-const quoteN = Math.floor(Math.random() * quotes.length)
-console.log(`[LOGGER:QUOTES] Quote number selected! ${quoteN}`);
-let quote = quotes[quoteN]['q'];
-let author = quotes[quoteN]['a'];
-quoteSelector.innerHTML=`"${quote}" - ${author}`
+  const quoteSelector = document.querySelector('#quote');
+  let end = Date.now();
+  let totalTime = end - beginning
+  console.log(`[LOGGER:QUOTES] Quotes loaded in ${totalTime}ms`);
+  const quoteN = Math.floor(Math.random() * quotes.length)
+  console.log(`[LOGGER:QUOTES] Quote number selected! ${quoteN}`);
+  let quote = quotes[quoteN]['q'];
+  let author = quotes[quoteN]['a'];
+  quoteSelector.innerHTML = `"${quote}" - ${author}`
 
+  function menu() {
+    const menu = document.querySelector('#menu')
+  }
+  async function logIn() {
+
+    let [username, password] = [document.querySelector("#username").innerHTML, document.querySelector('#password').innerHTML]
+
+    const response = await fetch('whatever', {
+      method: "POST",
+      data: {
+        username: username,
+        password: password
+      }
+    })
+    console.log("Poggers.")
+
+  }
 
 
 </script>
+
 </html>
-
-

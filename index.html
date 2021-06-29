@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <script src="quotes.js"> </script>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
@@ -7,52 +8,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vistora Test</title>
   <style>
-  .bg-cool {
-  background-image: url("https://i.pinimg.com/originals/13/b0/00/13b0000818cfd9cf27d39afaa051dc23.gif");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}</style>
+    .bg-cool {
+      background-image: url("https://i.pinimg.com/originals/13/b0/00/13b0000818cfd9cf27d39afaa051dc23.gif");
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
 </head>
+
 <body>
   <div class="bg-cool absolute min-h-screen w-screen ">
-  <div class="m-3">
-	
-	<!-- NAVBAR COMPONENT -->
-	
-<nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-  <div class="flex items-center flex-shrink-0 text-white mr-6">
-    <span class="font-semibold text-xl tracking-tight block">Vistora </span>
-  </div>
-  <div class="block lg:hidden">
-    <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-      <svg class="fill-current h-3 w-3 bg-white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-    </button>
-  </div>
-  <div class="w-full block align-middle flex-grow lg:flex lg:items-center text-white lg:w-auto">
-    <div class="text-sm lg:flex-grow">
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-blue-400 mr-4">
-        Home
-      </a>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-blue-400 mr-4">
-        Forum
-      </a>      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-blue-400 mr-4">
-        Store
-      </a>      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-blue-400 mr-4">
-        More
-      </a>
+    <div class="m-3">
+
+      <!-- NAVBAR COMPONENT -->
+
+      <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+          <span class="font-semibold text-2xl tracking-tight block">Vistora </span>
+        </div>
+        <div class="block lg:hidden">
+          <button onclick="menu()"
+            class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+            <svg class="fill-current h-3 w-3 bg-white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div id="menu" class="w-full block align-middle flex-grow lg:flex lg:items-center text-white lg:w-auto transition-all duration-500">
+          <div class="text-sm lg:flex-grow">
+            <a href="#responsive-header"
+              class="text-lg block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-blue-400 mr-4">
+              Home
+            </a>
+            <a href="#responsive-header"
+              class="text-lg block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-blue-400 mr-4">
+              Forum
+            </a> <a href="#responsive-header"
+              class="text-lg block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-blue-400 mr-4">
+              Store
+            </a> <a href="#responsive-header"
+              class="text-lg block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-blue-400 mr-4">
+              More
+            </a>
+
+          </div>
+          <div>
+            <a href="./register.html"
+              class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 hover:text-blue-500 lg:mt-0 text-lg">Register</a>
+
+            <a href="./login.html"
+              class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white hover:text-blue-500 mt-4 lg:mt-0 text-lg">Login</a>
+          </div>
+        </div>
+      </nav>
 
     </div>
-    <div>
-	      <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 hover:text-blue-500 lg:mt-0">Register</a>
+    <div class="text-xl md:text-3xl text-white text-center border-white border w-max p-4 rounded-lg mx-auto">Join thousands of
+      users on Vistora!</div>
+    <div class="md:grid md:grid-cols-3 md:mx-auto  md:place-items-center mx-6 my-6">
 
-      <a href="./login.html" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white hover:text-blue-500 mt-4 lg:mt-0">Login</a>
+      <div class=" md:mx-auto text-white border-white text-center p-5 rounded-xl w-max border transition-all duration-500 hover:bg-white hover:text-black hover:border-black transform hover:-skew-y-6">
+        <h1 class="text-2xl font-bold">Trade!</h1>
+        <img src="https://cdn.iconscout.com/icon/free/png-512/trading-11-443319.png"
+          class="w-64 mx-auto  rounded p-2" />
+      </div>
+
+
     </div>
+
+
   </div>
-</nav>
-	
   </div>
-  </div>
-  
 </body>
+<script>
+  const menuC = document.querySelector('#menu');
+  function menu() {
+    if (menuC.hasAttribute('style')) {
+      menuC.removeAttribute('style')
+    } else {
+      menuC.setAttribute('style', 'display:none;');
+
+    }
+  }
+</script>
+
+</html>
